@@ -1,7 +1,7 @@
 # Tugas 1
 
-**NIM**  : 19238912  
-**Nama** : asdqd  
+**NIM**  : 2341720116  
+**Nama** : Hanif Faishal Hilmi
 
 ---
 
