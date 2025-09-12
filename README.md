@@ -11,4 +11,8 @@ src/
 ├── pertemuan2/
 | ├── praktik/
 │ ├── tugas/
-│ └── README.md ← penjelasan pertemuan 2
+│ ├── README.md ← penjelasan pertemuan 2
+├── pertemuan3/
+| ├── praktik/
+│ ├── tugas/
+│ └── README.md ← penjelasan pertemuan 3
