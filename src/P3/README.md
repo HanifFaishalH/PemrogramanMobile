@@ -1,8 +1,6 @@
-Baik, saya bantu rapikan README-nya supaya lebih konsisten format dan rapi 👍
 
----
 
-# Tugas 1
+# PERTEMUAN 3
 
 **NIM**  : 2341720116
 **Nama** : Hanif Faishal Hilmi
