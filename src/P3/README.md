@@ -115,13 +115,12 @@ Kode error karena:
 2. `break` dan `continue` diletakkan di luar loop.
 3. Penulisan `Else If` salah, seharusnya `else if`.
 
-**Perbaikan**:
-Kode diperbaiki agar sesuai aturan sintaks.
-
-![Praktikum 3 no 3 fixed](/image/P3_Praktikum3_4.png)
-
 ---
 
-👉 README ini sekarang sudah konsisten: heading jelas, gambar terstruktur, penjelasan singkat, error dan perbaikan dipisahkan.
+### TUGAS 
 
-Mau saya tambahkan juga **cuplikan kode hasil perbaikan** (bukan hanya screenshot) supaya bisa langsung dicopy-paste untuk diuji?
+
+![Tugas Praktikum Bilangan Prima](/image/P3_Praktikum3_Tugas2.png)
+![Tugas Praktikum Bilangan Prima](/image/P3_Praktikum3_Tugas3.png)
+
+---
