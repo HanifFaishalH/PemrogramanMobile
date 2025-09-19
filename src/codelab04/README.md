@@ -1,170 +1,168 @@
+# Pertemuan 4: Tipe Data Collections, Records, dan Functions
 
-# PERTEMUAN 4
+Ini adalah dokumentasi hasil praktikum dan tugas untuk mata kuliah Pemrograman Berbasis Platform (TI-1A) pada pertemuan ke-4.
 
-**NIM**  : 2341720116
-**Nama** : Hanif Faishal Hilmi
+**NIM**: 2341720116  
+**Nama**: Hanif Faishal Hilmi
 
----
+-----
 
-## Jawaban
+## 📝 Praktikum
 
----
+### Praktikum 1: Eksperimen Tipe Data List
 
-### PRAKTIKUM 1 – Ekspreimen Tipe Data List 
+1.  **Membuat List**
 
-#### 1
+      * Sebuah `List` bernama `list` dibuat dengan tipe data `List<int>` yang berisi tiga elemen `[1, 2, 3]`.
 
-![Praktikum 1 no 1](/image/codelabP4/P4_praktikum1_1.png)
+2.  **Mengecek Properti List**
 
----
+      * `assert(list.length == 3)` digunakan untuk memvalidasi bahwa panjang `List` adalah 3.
+      * Nilai `1` pada indeks ke-0 juga divalidasi dengan `assert(list[0] == 1)`.
+      * Hasilnya menunjukkan bahwa `List` memiliki panjang 3 dengan elemen sesuai.
 
-#### 2
+3.  **Error dan Perbaikan**
 
-![Praktikum 1 no 2](/image/codelabP4/P4_praktikum1_2.png)
+      * **Error**: Penggunaan konstruktor `List(3)` menyebabkan error karena sudah tidak digunakan lagi (*deprecated*) di versi Dart terbaru.
+      * **Perbaikan**: Untuk mengubah nilai di dalam `List`, kita tidak perlu membuat `List` baru, cukup akses indeksnya secara langsung (misalnya `list[0] = 5;`).
 
-**Penjelasan**:
+-----
 
-Kode tersebut awalnya membuat sebuah list berisi tiga elemen. Dart mengenali list tersebut dengan tipe data List<int>. Kemudian, kode ```assert(list.length == 3);``` digunakan untuk mengecek panjang list. Kode ```assert()``` ini bisa digunakan untuk mengecek isi dari list tersebut. Lalu, kode mencetak panjang list dan data dari barisan list.
+### Praktikum 2: Eksperimen Tipe Data Set
 
----
+1.  **Membuat Set Kosong dan Menambah Elemen**
 
-#### 3
+      * Sebuah `Set` string kosong bernama `halogens` dibuat.
+      * Elemen ditambahkan satu per satu menggunakan metode `.add()`.
+      * Elemen duplikat yang ditambahkan (`'fluorine'`) secara otomatis diabaikan.
 
-![Praktikum 1 no 3 error 1](/image/codelabP4/P4_praktikum1_3.png)
+2.  **Karakteristik Set**
 
-**Penjelasan Error**:
+      * `Set` adalah koleksi yang elemennya harus **unik**.
+      * Tidak memiliki **indeks** (tidak bisa diakses dengan `halogens[0]`).
+      * Dideklarasikan menggunakan kurung kurawal `{}`.
+      * Urutan elemen tidak dijamin.
 
-Kode tersebut error karena pada dart versi terbaru, ```List(n)``` sudah deprecated dan tidak bisa dipakai lagi.
+3.  **Menggabungkan Set**
 
-**Perbaikan**:
-Ubah nilai variabel tanpa redeklarasi ulang, dan gunakan operator perbandingan.
+      * Dua `Set` string (`names1` dan `names2`) dibuat.
+      * Untuk menggabungkan, kita bisa menggunakan `.add()` untuk satu elemen atau `.addAll()` untuk menambahkan semua elemen dari `Set` lain.
 
-![Praktikum 1 no 3 error 2](/image/codelabP4/P4_praktikum1_3fix.png)
+-----
 
----
+### Praktikum 3: Eksperimen Tipe Data Maps
 
-### PRAKTIKUM 2 – Ekspreimen Tipe Data Set
+1.  **Membuat Map**
 
-#### 1
+      * Dua `Map` dibuat: `gifts` (`Map<String, String>`) dan `nobleGases` (`Map<int, String>`).
+      * `Map` adalah koleksi pasangan `key-value`. `Key` harus unik dan konsisten tipenya.
 
-![Praktikum 2 no 1](/image/codelabP4/P4_praktikum2_1.png)
+2.  **Menambah Elemen ke Map**
 
----
+      * Elemen baru dapat ditambahkan dengan menetapkan nilai ke `key` baru, contohnya: `gifts['fourth'] = 'calling birds';`.
 
-#### 2
+3.  **Error dan Perbaikan**
 
-![Praktikum 2 no 2](/image/codelabP4/P4_praktikum2_2.png)
+      * **Error**: Kode awal membuat `Map` baru yang kosong (`mhs1` dan `mhs2`) tetapi kemudian mencoba mengisi `Map` yang lama (`gifts` dan `nobleGases`).
+      * **Perbaikan**: Mengisi elemen ke `Map` yang benar (`mhs1` dan `mhs2`) agar tidak kosong saat dicetak.
 
-**Penjelasan**:
+-----
 
-variabel halogen dideklarasikan membentuk tipe data ```Set``` string. Hal yang membedakan ```Set``` dengan ```List``` adalah " 
-1. menggunakan "{}" pada baris nilainya,
-2. tidak punya index (tidak bisa diakses dengan ```halogens[0]```),
-3. semua elemennya unik (tidak bisa diduplikat),
-4. urutannya tidak selalu sama.
+### Praktikum 4: Spread dan Control-Flow Operators
 
----
+1.  **Spread Operator (`...`)**
 
-#### 3
+      * Operator `...` digunakan untuk "menyebarkan" atau memasukkan semua elemen dari satu `List` ke dalam `List` lain.
 
-![Praktikum 2 no 3](/image/codelabP4/P4_praktikum2_3.png)
+2.  **Null-Aware Spread Operator (`...?`)**
 
-**Penjelasan**:
-variabel names1 dan names2 sama-sama berbentuk ```Set```. Untuk menambah data, kita bisa menggunakan fungsi ```.add()``` dan ```.addAll()```. fungsi pertama untuk menambah satu data baru, sedangkan yang kedua untuk menambah data baru ke Set dalam jumlah jamak.
+      * Operator `...?` bekerja seperti spread operator, tetapi lebih aman. Ia hanya akan menyebarkan elemen jika `List` sumbernya **tidak null**. Jika `null`, ia tidak akan melakukan apa-apa dan tidak menyebabkan error.
 
----
+3.  **Collection If**
 
-### PRAKTIKUM 3 – Eksperimen Tipe Data Maps
+      * Fitur ini memungkinkan penambahan elemen ke dalam `List` secara kondisional.
+      * Contoh: `var nav = ['Home', if (promoActive) 'Outlet'];`. Elemen `'Outlet'` hanya ditambahkan jika `promoActive` bernilai `true`.
 
-#### 1
+4.  **Collection For**
 
-![Praktikum 3 no 1](/image/codelabP4/P4_praktikum4_1.png)
+      * Memungkinkan pembuatan elemen `List` baru dengan melakukan perulangan (`for`) di dalam deklarasi `List`. Ini membuat kode lebih ringkas dan deklaratif.
+      * Contoh: `var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];`.
 
----
+-----
 
-#### 2
+### Praktikum 5: Eksperimen Tipe Data Records
 
-![Praktikum 3 no 2](/image/codelabP4/P4_praktikum3_2.png)
+1.  **Membuat Record**
 
-**Penjelasan**:
-Kode tersebut mendeklarasikan gifts dan nobleGases dengan tipe data ```map```. Tipe data ini membutuhkan 'key' dan 'value'. Tipe data 'key' harus konsisten, sedangkan 'value' tidak harus sama. Kemudian, gifts dan nobleGases diprint.
+      * `Record` adalah struktur data untuk menggabungkan beberapa nilai dengan tipe berbeda menjadi satu objek. `Record` bisa memiliki field posisional dan bernama.
 
----
+2.  **Aturan Urutan Field**
 
-#### 3
+      * **Error**: Kode awal `('first', a: 2, 'last')` error karena semua field posisional **harus** ditulis sebelum field bernama.
+      * **Perbaikan Otomatis**: *Formatter* Dart secara otomatis akan memperbaiki urutannya menjadi `('first', 'last', a: 2)`.
 
-![Praktikum 3 no 3](/image/codelabP4/P4_praktikum3_3.png)
+3.  **Fungsi dengan Record**
 
-**Penjelasan Error**:
+      * Sebuah fungsi `tukar` dibuat untuk menukar posisi dua `int` di dalam sebuah `Record`. Fungsi ini menunjukkan bagaimana `Record` bisa menjadi parameter dan nilai kembali (*return value*).
 
-Kode tersebut error karena tidak ada data yang dimasukkan ke dalam map mhs1 dan mhs2. Sehingga, perlu mengubah key dan value dari gifts dan nobleGases ke mhs1 dan mhs2.
+4.  **Inisialisasi Record**
 
+      * **Error**: Mencoba menggunakan variabel `Record` (`mahasiswa`) sebelum diinisialisasi akan menyebabkan error karena Dart memiliki *null safety*.
+      * **Perbaikan**: Berikan nilai awal pada variabel sebelum digunakan, contohnya `mahasiswa = ('Hanif', 2341720116);`.
 
-![Praktikum 3 no 3 fixed](/image/codelabP4/P4_praktikum3_3fix.png)
+5.  **Mengakses Field Record**
 
----
+      * Field posisional diakses menggunakan `$index` (contoh: `mahasiswa2.$1`).
+      * Field bernama diakses menggunakan `.namaField` (contoh: `mahasiswa2.nim`).
 
-### PRAKTIKUM 4 – Eksperimen Tipe Data List: Spread dan Control-flow Operators
+-----
 
-#### 1
+## 📚 Tugas
 
-![Praktikum no 1](/image/codelabP4/P4_praktikum4_1.png)
+#### 1\. Apa itu Functions?
 
----
+**Functions** (fungsi) adalah blok kode yang dapat digunakan kembali untuk melakukan tugas tertentu, membuatnya lebih terstruktur dan efisien.
 
-#### 2
+-----
 
-![Praktikum no 2](/image/codelabP4/P4_praktikum4_2.png)
+#### 2\. Jenis-Jenis Parameter di Functions
 
-**Penjelasan**:
-variabel ```list``` dideklarasikan dengan tipe data ```List```. Kemudian, ```list2``` dideklarasikan dengan tipe data ```List``` juga, tapi elemennya mengambil dari milik ```list```. Sehingga, ketika diprint, output dari ```list2``` memiliki 4 elemen data.
+  * **Positional Parameters**: Nilainya ditentukan oleh posisi. Bisa bersifat wajib (*required*) atau opsional (`[]`).
+  * **Named Parameters**: Nilainya ditentukan oleh nama, bukan posisi. Umumnya bersifat opsional (`{}`) tetapi bisa diwajibkan dengan `required`.
 
----
+-----
 
-#### 3
+#### 3\. Functions sebagai First-Class Objects
 
-![Praktikum no 3](/image/codelabP4/P4_praktikum4_3.1.png)
-![Praktikum no 3](/image/codelabP4/P4_praktikum4_3.2.png)
-![Praktikum no 3](/image/codelabP4/P4_praktikum4_3.3.png)
+Artinya, functions diperlakukan setara dengan tipe data lain. Sebuah fungsi dapat **disimpan dalam variabel**, **dijadikan argumen** untuk fungsi lain, dan **dikembalikan sebagai hasil** dari fungsi lain.
 
-**Penjelasan**:
-Kode tersebut tidak error karena menggunakan **null-aware spread operator**. Jadi, ```list3``` tidak akan mengambil elemen dari ```list1``` jika elemen ```list1``` itu kosong. Karena ```list1``` memiliki elemen, ```list3``` mengambil elemen tersebut untuk mengisi elemen listnya.
+-----
 
----
+#### 4\. Apa itu Anonymous Functions?
 
-#### 4
+**Anonymous Functions** (juga disebut *lambda*) adalah fungsi yang tidak memiliki nama. Biasanya digunakan untuk tugas singkat, seperti menjadi argumen untuk fungsi `forEach` pada `List`.
 
-![Praktikum no 4](/image/codelabP4/P4_praktikum4_4.png)
+-----
 
-**Penjelasan**:
-Kode tersebut menggunakan if-else untuk menampilkan elemen yang ada di dalam nav. Ketika promoActive bernilai true, semua elemen yang ditampilkan di output. Jika bernilai false, elemen 'Outlet' tidak ditampilkan
+#### 5\. Perbedaan Lexical Scope dan Lexical Closures
 
----
+  * **Lexical Scope**: Kemampuan sebuah fungsi untuk mengakses variabel dari lingkup di luarnya (lingkup induk) berdasarkan lokasi penulisannya di kode.
+  * **Lexical Closures**: Sebuah *function object* yang "mengingat" variabel dari lingkup tempat ia dibuat, bahkan saat fungsi itu dijalankan di luar lingkup aslinya.
 
-#### 5
+-----
 
-![Praktikum no 5](/image/codelabP4/P4_praktikum4_5.png)
+#### 6\. Cara Return Multiple Values di Functions
 
-**Penjelasan**:
-Kode tersebut menggunakan case untuk menampilkan elemen yang ada di dalam nav. Ketika variabel login  adalah 'Manager', semua elemen yang ditampilkan di output. Jika login bernilai selain 'Manager', elemen 'Inventory' tidak ditampilkan.
+Cara modern dan paling direkomendasikan di Dart adalah menggunakan **Records**. Sebuah fungsi bisa didefinisikan untuk mengembalikan `Record` yang berisi beberapa nilai.
 
----
+**Contoh:**
 
-#### 6
+```dart
+// Fungsi ini mengembalikan Record berisi (String, int)
+(String, int) getUser() {
+  return ('Hanif Faishal Hilmi', 2341720116);
+}
 
-![Praktikum no 6](/image/codelabP4/P4_praktikum4_6.png)
-
-**Penjelasan**:
-variabel listOfInts berbentuk List dibuat. Kemudian, List kedua bernama listOfStrings dibuat. di list kedua ini, tiap angka yang ada di list listOfInts diubah menjadi string dan ditambah simbol # di depannya. Kemudian, listOfString divalidasi dengan assert dan hasilnya sesuai. Lalu, listOfString ditampilkan ke output.
-
-Di percobaan ini, Collection For mempercepat pembuatan elemen dari listOfString dengan mengubah elemen yang ada di listOfInts dari int menjadi string dan ditambah #.
-
----
-
-### TUGAS 
-
-
-![Tugas Praktikum Bilangan Prima](/image/P3_Praktikum3_Tugas2.png)
-![Tugas Praktikum Bilangan Prima](/image/P3_Praktikum3_Tugas3.png)
-
----
+// Mengambil nilainya
+var (nama, nim) = getUser();
+```
