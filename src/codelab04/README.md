@@ -74,37 +74,33 @@ variabel names1 dan names2 sama-sama berbentuk ```Set```. Untuk menambah data, k
 
 ---
 
-### PRAKTIKUM 3 – Menerapkan Perulangan `for`
+### PRAKTIKUM 3 – Eksperimen Tipe Data Maps
 
 #### 1
 
-![Praktikum 3 no 1](/image/P3_Praktikum3_1.png)
+![Praktikum 3 no 1](/image/codelabP4/P4_praktikum3_1.png)
 
 ---
 
 #### 2
 
-![Praktikum 3 no 2 error](/image/P3_Praktikum3_1.png)
+![Praktikum 3 no 2](/image/codelabP4/P4_praktikum3_2.png)
 
 **Penjelasan**:
-Kode error karena:
-
-* Variabel `Index` dan `index` berbeda (case-sensitive) dan belum dideklarasikan.
-* Solusi: deklarasikan salah satu dengan benar, misalnya `int index`.
-
-![Praktikum 3 no 2 fixed](/image/P3_Praktikum3_2.png)
+Kode tersebut mendeklarasikan gifts dan nobleGases dengan tipe data ```map```. Tipe data ini membutuhkan 'key' dan 'value'. Tipe data 'key' harus konsisten, sedangkan 'value' tidak harus sama. Kemudian, gifts dan nobleGases diprint.
 
 ---
 
 #### 3
 
-![Praktikum 3 no 3 error](/image/P3_Praktikum3_3.png)
+![Praktikum 3 no 3](/image/codelabP4/P4_praktikum3_3.png)
 
 **Penjelasan Error**:
 
-1. Variabel `Index` tidak dikenal.
-2. `break` dan `continue` diletakkan di luar loop.
-3. Penulisan `Else If` salah, seharusnya `else if`.
+Kode tersebut error karena tidak ada data yang dimasukkan ke dalam map mhs1 dan mhs2. Sehingga, perlu mengubah key dan value dari gifts dan nobleGases ke mhs1 dan mhs2.
+
+
+![Praktikum 3 no 3 fixed](/image/codelabP4/P4_praktikum3_3fix.png)
 
 ---
 
