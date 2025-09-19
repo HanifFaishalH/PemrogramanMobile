@@ -1,7 +1,5 @@
 # Pertemuan 4: Tipe Data Collections, Records, dan Functions
 
-Ini adalah dokumentasi hasil praktikum dan tugas untuk mata kuliah Pemrograman Berbasis Platform (TI-1A) pada pertemuan ke-4.
-
 **NIM**: 2341720116  
 **Nama**: Hanif Faishal Hilmi
 
