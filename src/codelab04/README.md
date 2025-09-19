@@ -43,32 +43,34 @@ Ubah nilai variabel tanpa redeklarasi ulang, dan gunakan operator perbandingan.
 
 ---
 
-### PRAKTIKUM 2 – Menerapkan Perulangan `while` dan `do-while`
+### PRAKTIKUM 2 – Ekspreimen Tipe Data Set
 
 #### 1
 
-![Praktikum 2 no 1](/image/P3_Praktikum2_1.png)
+![Praktikum 2 no 1](/image/codelabP4/P4_praktikum2_1.png)
 
 ---
 
 #### 2
 
-![Praktikum 2 no 2 error](/image/P3_Praktikum2_1.png)
+![Praktikum 2 no 2](/image/codelabP4/P4_praktikum2_2.png)
 
 **Penjelasan**:
-Kode error karena variabel `counter` belum dideklarasikan. Solusi: tambahkan deklarasi `int counter = 0;`.
 
-![Praktikum 2 no 2 fixed](/image/P3_Praktikum2_2.png)
+variabel halogen dideklarasikan membentuk tipe data ```Set``` string. Hal yang membedakan ```Set``` dengan ```List``` adalah " 
+1. menggunakan "{}" pada baris nilainya,
+2. tidak punya index (tidak bisa diakses dengan ```halogens[0]```),
+3. semua elemennya unik (tidak bisa diduplikat),
+4. urutannya tidak selalu sama.
 
 ---
 
 #### 3
 
-![Praktikum 2 no 3](/image/P3_Praktikum2_3.png)
+![Praktikum 2 no 3](/image/codelabP4/P4_praktikum2_3.png)
 
 **Penjelasan**:
-Saat ditambahkan `do-while` setelah `while`, tidak terjadi error.
-`do-while` melanjutkan nilai `counter` terakhir dari loop `while` sebelumnya.
+variabel names1 dan names2 sama-sama berbentuk ```Set```. Untuk menambah data, kita bisa menggunakan fungsi ```.add()``` dan ```.addAll()```. fungsi pertama untuk menambah satu data baru, sedangkan yang kedua untuk menambah data baru ke Set dalam jumlah jamak.
 
 ---
 
